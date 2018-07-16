@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Warsztat;
+using Workshop;
 
 namespace Workshop.DAL.Migrations
 {
-    [DbContext(typeof(WorkschopContext))]
+    [DbContext(typeof(WorkshopContext))]
     [Migration("20180715190501_InitDatabase")]
     partial class InitDatabase
     {

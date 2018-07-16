@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Warsztat.Model;
+using Workshop.Models.Entities;
 
-namespace Warsztat
+namespace Workshop.DAL
 {
-    public class WorkschopContext : DbContext
+    public class WorkshopContext : DbContext
     {
         public DbSet<Car> Cars { get; set; }
         public DbSet<Order> Orders { get; set; }

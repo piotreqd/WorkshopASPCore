@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using WorkshopModels.Entities.Base;
 
-namespace Warsztat.Model
+namespace Workshop.Models.Entities
 {
     public class Part : BaseEntity
     {
