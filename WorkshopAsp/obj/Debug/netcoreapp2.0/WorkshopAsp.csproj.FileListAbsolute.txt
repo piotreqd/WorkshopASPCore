@@ -1,0 +1,11 @@
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\bin\Debug\netcoreapp2.0\WorkshopAsp.deps.json
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\bin\Debug\netcoreapp2.0\WorkshopAsp.runtimeconfig.json
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\bin\Debug\netcoreapp2.0\WorkshopAsp.runtimeconfig.dev.json
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\bin\Debug\netcoreapp2.0\WorkshopAsp.dll
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\bin\Debug\netcoreapp2.0\WorkshopAsp.pdb
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\obj\Debug\netcoreapp2.0\WorkshopAsp.csproj.CoreCompileInputs.cache
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\obj\Debug\netcoreapp2.0\WorkshopAsp.AssemblyInfoInputs.cache
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\obj\Debug\netcoreapp2.0\WorkshopAsp.AssemblyInfo.cs
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\obj\Debug\netcoreapp2.0\WorkshopAsp.dll
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\obj\Debug\netcoreapp2.0\WorkshopAsp.pdb
+C:\Users\Piotrek\Desktop\WorkshopAsp\WorkshopAsp\WorkshopAsp\obj\Debug\netcoreapp2.0\WorkshopAsp.csprojAssemblyReference.cache
