@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using WorkshopAsp.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using WorkshopAsp.Models.DomainModel;
 
 namespace WorkshopAsp
 {

@@ -8,5 +8,6 @@ namespace WorkshopAsp.Models
     public interface IOwnerRepository
     {
         IQueryable<Owner> Owners { get; }
+        void Save(Owner owner);
     }
 }

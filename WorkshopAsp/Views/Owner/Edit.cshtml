@@ -1,0 +1,18 @@
+﻿@model Owner
+@{
+    ViewBag.Title = "edycja klienta";
+}
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name">@Model.Name @Model.Surname</label>
+        <div><span asp-validation-for="PhoneNumber" class="text-danger"></span></div>
+        <textarea asp-for="PhoneNumber" class="form-control"></textarea>
+    </div>
+    <div class="text-left">
+        <button class="btn btn-primary" type="submit">Save</button>
+        <a asp-action="List" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
