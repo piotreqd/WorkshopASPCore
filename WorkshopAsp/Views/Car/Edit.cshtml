@@ -1,0 +1,22 @@
+﻿
+@model Car
+@{
+    ViewBag.Title = "Edycja samochodu";
+}
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="Mark" />
+    <input type="hidden" asp-for="Model" />
+
+    <div class="form-group">
+        <label asp-for="Registration">@Model.Mark @Model.Model</label>
+        <div><span asp-validation-for="Registration" class="text-danger"></span></div>
+        <input asp-for="Registration" class="form-control"/>
+    </div>
+
+    <div class="text-left">
+        <button class="btn btn-primary" type="submit">Save</button>
+        <a asp-action="List" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>

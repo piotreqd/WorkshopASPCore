@@ -9,5 +9,6 @@ namespace WorkshopAsp.Models
     {
         IQueryable<Owner> Owners { get; }
         void Save(Owner owner);
+        void Delete(int id);
     }
 }

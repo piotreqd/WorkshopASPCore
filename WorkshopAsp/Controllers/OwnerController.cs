@@ -14,7 +14,10 @@ namespace WorkshopAsp.Controllers
             repository = repo;
         }
 
-        public ViewResult List() => View(repository.Owners);
+        public ViewResult List()
+        {
+            return View(repository.Owners);
+        }
         public ViewResult Edit(int ownerId) =>
             View(repository.Owners.FirstOrDefault(o => o.Id == ownerId));
 
@@ -30,6 +33,15 @@ namespace WorkshopAsp.Controllers
             {
                 TempData["message"] = $"Wystąpił błąd";
             }
+            return RedirectToAction("List");
+        }
+
+        public ViewResult Create() => View("Edit", new Owner());
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            repository.Delete(id);
             return RedirectToAction("List");
         }
     }

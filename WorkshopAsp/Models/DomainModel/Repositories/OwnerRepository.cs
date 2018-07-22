@@ -17,11 +17,28 @@ namespace WorkshopAsp.Models
         public void Save(Owner owner)
         {
             var changedOwner = context.Owners.FirstOrDefault(o => o.Id == owner.Id);
-            if(changedOwner != null)
+            if (changedOwner != null)
             {
+                changedOwner.Name = owner.Name;
+                changedOwner.Surname = owner.Surname;
                 changedOwner.PhoneNumber = owner.PhoneNumber;
             }
+            else
+            {
+                context.Owners.Add(owner);
+            }
             context.SaveChanges();
+        }
+
+        public void Delete(int id)
+        {
+            var deletedOwner = context.Owners.FirstOrDefault(o => o.Id == id);
+            if (deletedOwner != null)
+            {
+                context.Owners.Remove(deletedOwner);
+                context.SaveChanges();
+            }
+
         }
     }
 }

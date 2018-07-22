@@ -1,0 +1,15 @@
+﻿@model WorkshopAsp.Models.ViewModels.OwnerCarViewModel
+
+<a2>@Model.OwnerFullName</a2>
+
+<table class="table">
+
+    @foreach (var car in Model.Cars)
+    {
+        @Html.Partial("PartialCar", car);
+    }
+
+</table>
+<div class="text-left">
+    <input type="button" class="btn btn-info" value="Dodaj samochód" onclick="location.href='@Url.Action("Create", "Car", new { ownerId = Model.OwnerId})'" />
+</div>

@@ -11,5 +11,9 @@ namespace WorkshopAsp.Models.DomainModel
         public WorkshopContext(DbContextOptions<WorkshopContext> options) : base(options) { }
 
         public DbSet <Owner> Owners { get; set; }
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Activity> Activities { get; set; }
+        public DbSet<Part> Parts { get; set; }
     }
 }

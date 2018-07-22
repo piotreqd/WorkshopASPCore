@@ -20,12 +20,28 @@ namespace WorkshopAsp.Models
             if (!context.Owners.Any())
             {
                 context.Owners.AddRange(
-                    new Owner { Name = "Kakashi", Surname = "Hatake", PhoneNumber = "111222333" },
-                    new Owner { Name = "Naruto", Surname = "Uzumaki", PhoneNumber = "222333444" },
-                    new Owner { Name = "Ichigo", Surname = "Kurosaki", PhoneNumber = "333444555" }
+                    new Owner
+                    {
+                        Name = "Kakashi",
+                        Surname = "Hatake",
+                        PhoneNumber = "111222333",
+                        Cars =
+                        new List<Car> {
+                            new Car {Mark = "vw", Model = "golf", Registration = "swd123" }
+                    }
+                    }
+                    //new Owner { Name = "Naruto", Surname = "Uzumaki", PhoneNumber = "222333444" },
+                    //new Owner { Name = "Ichigo", Surname = "Kurosaki", PhoneNumber = "333444555" }
                     );
                 context.SaveChanges();
             }
+            /*if (!context.Cars.Any())
+            {
+                context.Cars.AddRange(
+                    new Car { Mark = "vw", Model = "golf", Registration = "swd123", OwnerId = 1 }
+                    );
+                context.SaveChanges();
+            }*/
         }
     }
 }

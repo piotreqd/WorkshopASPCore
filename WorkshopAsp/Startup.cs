@@ -10,6 +10,8 @@ using WorkshopAsp.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using WorkshopAsp.Models.DomainModel;
+using WorkshopAsp.Models.DomainModel.Interfaces;
+using WorkshopAsp.Models.DomainModel.Repositories;
 
 namespace WorkshopAsp
 {
@@ -26,6 +28,7 @@ namespace WorkshopAsp
                 options.UseSqlServer(
                     Configuration["Data:Workshop:ConnectionString"]));
             services.AddTransient<IOwnerRepository, OwnerRepository>();
+            services.AddTransient<ICarRepository, CarRepository>();
             services.AddMvc();
         }
 
@@ -40,7 +43,7 @@ namespace WorkshopAsp
                     name: "default",
                     template: "{controller=Owner}/{action=List}/{id?}");
             });
-            Seed.EnsurePopulated(app);
+            //Seed.EnsurePopulated(app);
             /*if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
