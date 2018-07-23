@@ -29,6 +29,7 @@ namespace WorkshopAsp
                     Configuration["Data:Workshop:ConnectionString"]));
             services.AddTransient<IOwnerRepository, OwnerRepository>();
             services.AddTransient<ICarRepository, CarRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddMvc();
         }
 

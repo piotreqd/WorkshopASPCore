@@ -1,19 +1,21 @@
 ﻿@model Order
 <tr style="background-color:ghostwhite">
-    <tr>
-        <th>Zlecenie</th>
-        <th>Status</th>
-        <th>Data rozpoczęcia</th>
-        <th>Data zakończenia</th>
-    </tr>
+   <tr>
+    <th>Zlecenie</th>
+    <th>Status</th>
+    <th>Data rozpoczęcia</th>
+    <th>Data zakończenia</th>
+  </tr>
 
     <td>
         @Model.Name
     </td>
 
     <td>
-        @if (Model.EndDate == null){<p> Nieskończone </p>}
-        else{ <p>Zakończone<p> }
+        @if (Model.EndDate == null)
+        {<p> Nieskończone </p>}
+        else
+        {<a>Zakończone</a>}
     </td>
 
     <td>
@@ -21,16 +23,18 @@
     </td>
 
     <td>
-        @if(Model.EndDate == null) { <a2> --- </a2>}
-        else { @Model.EndDate }
+        @if (Model.EndDate == null)
+        {<a2> --- </a2>}
+        else
+        { @Model.EndDate}
     </td>
 
     <td class="text-center">
         <form asp-action="Delete" method="post">
-            <a asp-action="Edit" class="btn btn-sm btn-warning" asp-route-carId="@Model.Id">Edytuj</a>
+            <a asp-action="End" class="btn btn-sm btn-warning" asp-route-orderId="@Model.Id">Zakończ</a>
             <input type="hidden" name="id" value="@Model.Id" />
             <button type="submit" class="btn btn-danger btn-sm">Usuń</button>
-            <input type="button" class="btn btn-info" value="Zlecenia" onclick="location.href='@Url.Action("List", "Order", new { carId = Model.Id})'" />
+            <input type="button" class="btn btn-info" value="Aktywności w ramach zlecenia" onclick="location.href='@Url.Action("List", "Order", new { carId = Model.Id})'" />
         </form>
     </td>
 </tr>

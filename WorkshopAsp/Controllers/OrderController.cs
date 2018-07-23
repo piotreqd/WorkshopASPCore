@@ -10,9 +10,20 @@ namespace WorkshopAsp.Controllers
     public class OrderController : Controller
     {
         private IOrderRepository repository;
+        public OrderController(IOrderRepository repository)
+        {
+            this.repository = repository;
+        }
         public IActionResult List(int carId)
         {
             return View(repository.Orders.Where(o => o.CarId == carId));
+        }
+
+        public IActionResult End(int orderId)
+        {
+            repository.End(orderId);
+            return RedirectToAction("List", "Owner");
+
         }
     }
 }
