@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Activity>
+
+<table class="table">
+    <tr>
+        <th>Aktywność</th>
+        <th>Robocizna</th>
+    </tr>
+    @foreach (var activity in Model)
+    {
+        @Html.Partial("PartialActivity", activity);
+    }
+
+</table>
+<div class="text-left">
+    <input type="button" class="btn btn-info" value="Dodaj aktywność" onclick="location.href='@Url.Action("Create", "Activity", new { orderId = ViewBag.orderId})'" />
+</div>
+

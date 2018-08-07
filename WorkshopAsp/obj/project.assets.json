@@ -13354,11 +13354,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Piotrek\\Desktop\\WorkshopAsp\\WorkshopAsp\\WorkshopAsp\\WorkshopAsp.csproj",
+      "projectUniqueName": "C:\\Users\\Piotrek\\Desktop\\WorkshopASPCore\\WorkshopAsp\\WorkshopAsp.csproj",
       "projectName": "WorkshopAsp",
-      "projectPath": "C:\\Users\\Piotrek\\Desktop\\WorkshopAsp\\WorkshopAsp\\WorkshopAsp\\WorkshopAsp.csproj",
+      "projectPath": "C:\\Users\\Piotrek\\Desktop\\WorkshopASPCore\\WorkshopAsp\\WorkshopAsp.csproj",
       "packagesPath": "C:\\Users\\Piotrek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Piotrek\\Desktop\\WorkshopAsp\\WorkshopAsp\\WorkshopAsp\\obj\\",
+      "outputPath": "C:\\Users\\Piotrek\\Desktop\\WorkshopASPCore\\WorkshopAsp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

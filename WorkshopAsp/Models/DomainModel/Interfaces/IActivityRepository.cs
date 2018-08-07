@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace WorkshopAsp.Models.DomainModel.Interfaces
 {
-    public interface IOrderRepository
+    public interface IActivityRepository
     {
-        IQueryable<Order> Orders { get; }
-        void Begin(Order order);
-        void End(int orderId);
+        IQueryable<Activity> Activities { get;}
+        void Save(Activity activity);
+        void Delete(int activityId);
     }
 }

@@ -1,0 +1,16 @@
+﻿@model Activity
+<tr>
+    <td>
+        @Model.Name
+    </td>
+
+    <td>
+        @Model.LaborPrice
+    </td>
+
+    <td class="text-center">
+        <form asp-action="Delete" method="post">
+            <input type="button" class="btn btn-info btn-sm" value="Użyte części" onclick="location.href='@Url.Action("List", "Part", new { activityId = Model.Id})'" />
+        </form>
+    </td>
+</tr>

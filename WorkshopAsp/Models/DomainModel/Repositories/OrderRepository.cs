@@ -17,9 +17,12 @@ namespace WorkshopAsp.Models.DomainModel.Repositories
 
         public IQueryable<Order> Orders => context.Orders;
 
-        public void Begin()
+        public void Begin(Order order)
         {
-            throw new NotImplementedException();
+            order.StartDate = DateTime.Now;
+            order.EndDate = null;
+            context.Orders.Add(order);
+            context.SaveChanges(); ;
         }
 
         public void End(int orderId)

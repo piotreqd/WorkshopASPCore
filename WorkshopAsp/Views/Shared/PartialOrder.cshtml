@@ -1,12 +1,7 @@
 ﻿@model Order
 <tr style="background-color:ghostwhite">
-   <tr>
-    <th>Zlecenie</th>
-    <th>Status</th>
-    <th>Data rozpoczęcia</th>
-    <th>Data zakończenia</th>
-  </tr>
 
+  <tr>
     <td>
         @Model.Name
     </td>
@@ -31,10 +26,10 @@
 
     <td class="text-center">
         <form asp-action="Delete" method="post">
-            <a asp-action="End" class="btn btn-sm btn-warning" asp-route-orderId="@Model.Id">Zakończ</a>
+            <a asp-action="End" class="btn btn-sm btn-warning" asp-route-orderId="@Model.Id" asp-route-carId="@Model.CarId">Zakończ</a>
             <input type="hidden" name="id" value="@Model.Id" />
-            <button type="submit" class="btn btn-danger btn-sm">Usuń</button>
-            <input type="button" class="btn btn-info" value="Aktywności w ramach zlecenia" onclick="location.href='@Url.Action("List", "Order", new { carId = Model.Id})'" />
+            <!--<button type="submit" class="btn btn-danger btn-sm">Usuń</button>-->
+            <input type="button" class="btn btn-info btn-sm" value="Aktywności w ramach zlecenia" onclick="location.href='@Url.Action("List", "Activity", new { orderId = Model.Id})'" />
         </form>
     </td>
 </tr>

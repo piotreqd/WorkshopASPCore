@@ -1,5 +1,5 @@
 ﻿@model Car
-<tr style="background-color:ghostwhite">
+<tr>
     <td>
         @Model.Mark @Model.Model
     </td>
@@ -11,7 +11,7 @@
             <a asp-action="Edit" class="btn btn-sm btn-warning" asp-route-carId="@Model.Id">Edytuj</a>
             <input type="hidden" name="id" value="@Model.Id" />
             <button type="submit" class="btn btn-danger btn-sm">Usuń</button>
-            <input type="button" class="btn btn-info" value="Zlecenia" onclick="location.href='@Url.Action("List", "Order", new { carId = Model.Id})'" />
+            <input type="button" class="btn btn-info btn-sm" value="Zlecenia" onclick="location.href='@Url.Action("List", "Order", new { carId = Model.Id})'" />
         </form>
     </td>
 </tr>

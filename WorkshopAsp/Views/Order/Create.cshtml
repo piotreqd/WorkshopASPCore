@@ -1,0 +1,18 @@
+﻿@model Order
+@{
+    ViewBag.Title = "Dodawanie zamówienia";
+}
+
+<form asp-action="Create" method="post">
+
+    <div class="form-group">
+        <label asp-for="CarId">Mark</label><input type="hidden" name="carId" value=@ViewBag.carId />
+        <<label asp-for="Name">Nazwa zlecenia</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="text-left">
+        <button class="btn btn-primary" type="submit">Save</button>
+        <a asp-action="List" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>

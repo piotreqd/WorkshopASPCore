@@ -1,7 +1,12 @@
-﻿@model IQueryable<Order>
-
+﻿@model IEnumerable<Order>
+<!--<a>Zlecenia na samochodzie Model.CarName</a>-->
 <table class="table">
-
+    <tr>
+        <th>Zlecenie</th>
+        <th>Status</th>
+        <th>Data rozpoczęcia</th>
+        <th>Data zakończenia</th>
+    </tr>
     @foreach (var order in Model)
     {
         @Html.Partial("PartialOrder", order);
@@ -9,6 +14,7 @@
 
 </table>
 <div class="text-left">
-    <a asp-action="Create" class="btn btn-primary">Dodaj zlecenie</a>
+    <!--<a asp-action="Create" class="btn btn-primary">Dodaj zlecenie</a>-->
+    <input type="button" class="btn btn-info" value="Dodaj zlecenie" onclick="location.href='@Url.Action("Create", "Order", new { carId = ViewBag.carId})'" />
 </div>
 

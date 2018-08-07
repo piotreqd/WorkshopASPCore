@@ -30,6 +30,8 @@ namespace WorkshopAsp
             services.AddTransient<IOwnerRepository, OwnerRepository>();
             services.AddTransient<ICarRepository, CarRepository>();
             services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IActivityRepository, ActivityRepository>();
+            services.AddTransient<IPartRepository, PartRepository>();
             services.AddMvc();
         }
 

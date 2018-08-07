@@ -11,9 +11,10 @@ using WorkshopAsp.Models.DomainModel;
 namespace WorkshopAsp.Migrations
 {
     [DbContext(typeof(WorkshopContext))]
-    partial class WorkshopContextModelSnapshot : ModelSnapshot
+    [Migration("20180805201326_LabourPriceChanged")]
+    partial class LabourPriceChanged
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
