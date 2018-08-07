@@ -6,8 +6,9 @@
 <form asp-action="Create" method="post">
 
     <div class="form-group">
-        <label asp-for="CarId">Mark</label><input type="hidden" name="carId" value=@ViewBag.carId />
-        <<label asp-for="Name">Nazwa zlecenia</label>
+        <label asp-for="CarId"/>
+        <input type="hidden" name="carId" value=@ViewBag.carId />
+        <label asp-for="Name">Nazwa zlecenia</label>
         <input asp-for="Name" class="form-control" />
     </div>
 
