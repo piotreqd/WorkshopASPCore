@@ -16,14 +16,20 @@ namespace WorkshopAsp.Models.DomainModel.Repositories
 
         public IQueryable<Part> Parts => context.Parts;
 
-        public void Delete(int partId)
-        {
-            throw new NotImplementedException();
-        }
 
         public void Save(Part part)
         {
-            throw new NotImplementedException();
+            var changedPart = context.Parts.FirstOrDefault(p => p.Id == part.Id);
+            if (changedPart == null)
+            {
+                context.Parts.Add(part);
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+            context.SaveChanges();
+
         }
     }
 }

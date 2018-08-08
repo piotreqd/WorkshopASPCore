@@ -22,26 +22,43 @@ namespace WorkshopAsp.Models
                 context.Owners.AddRange(
                     new Owner
                     {
-                        Name = "Kakashi",
-                        Surname = "Hatake",
+                        Name = "Harry",
+                        Surname = "Potter",
                         PhoneNumber = "111222333",
-                        Cars =
-                        new List<Car> {
-                            new Car {Mark = "vw", Model = "golf", Registration = "swd123" }
+                        Cars = new List<Car>{
+                            new Car {
+                                Mark = "vw",
+                                Model = "golf",
+                                Registration = "swd123",
+                                Orders = new List<Order>{
+                                    new Order{
+                                        Name = "Wymiana przegubu",
+                                        StartDate = DateTime.Now,
+                                        EndDate = null,
+                                        Activities = new List<Activity> {
+                                            new Activity{
+                                                Name = "rozkręcenie przegubu",
+                                                LaborPrice = 30m
+                                            },
+                                            new Activity{
+                                                Name = "przykręcenie przegubu",
+                                                LaborPrice = 50m,
+                                                Parts = new List<Part>{
+                                                    new Part{Name = "śrubki 10", Price = 10m}
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                    }
-                    //new Owner { Name = "Naruto", Surname = "Uzumaki", PhoneNumber = "222333444" },
-                    //new Owner { Name = "Ichigo", Surname = "Kurosaki", PhoneNumber = "333444555" }
+
+
                     );
                 context.SaveChanges();
             }
-            /*if (!context.Cars.Any())
-            {
-                context.Cars.AddRange(
-                    new Car { Mark = "vw", Model = "golf", Registration = "swd123", OwnerId = 1 }
-                    );
-                context.SaveChanges();
-            }*/
         }
     }
 }

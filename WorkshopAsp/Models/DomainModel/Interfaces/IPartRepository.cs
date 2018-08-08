@@ -9,6 +9,5 @@ namespace WorkshopAsp.Models.DomainModel.Interfaces
     {
         IQueryable<Part> Parts { get; }
         void Save(Part part);
-        void Delete(int partId);
     }
 }
